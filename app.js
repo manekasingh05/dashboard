@@ -37,6 +37,10 @@ app.use(bodyParser.json());
 
 app.use('/', homeRouter);
 
+app.get('/dashboard', (req, res) => {
+    res.render('main');
+  });
+
 
   app.listen(port, () =>{
     console.log(`using port ${port}`);
