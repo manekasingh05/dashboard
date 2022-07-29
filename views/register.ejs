@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1 style="color: rgb(34, 3, 3);"> <%= title %>  </h1>
+   <h1 style="color: rgb(65, 211, 7);"> <%= password %>  </h1>
+   <h1 style="color: rgb(255, 0, 200);"> <%= email %>  </h1>
+
+   <div class="container">
+    <div class="row">
+      <div class="col">
+
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+           <!-- signup -->
+			<div class="signup">
+				<form action="/register" method="post">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="name" placeholder="Username" >
+					<input type="number" name="number" placeholder="Phone" >
+					<input type="email" name="email" placeholder="Email" >
+					<input type="password" name="password" placeholder="Password" >
+					<input type="password" name="cpassword" placeholder="Confirm Password" >
+					<button type="submit">Sign up</button>
+				</form>
+			</div>
+         <!-- login -->
+			<div class="login">
+				<form method="post" action="/login">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="password" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+    </div>
+    </div>
+    <div id="section2" class="col">
+
+        <img class="logo" src="/images/logo.png">
+        <img class="cartoon" src="/images/cartoon.png">
+        
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+</body>
+</html>
