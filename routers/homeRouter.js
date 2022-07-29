@@ -61,7 +61,7 @@ Router.post('/register',async(req,res)=>{
        homeSchema.findOne({email:email},(err,result)=>{
            
            if(email === result.email && password === result.password){
-               res.render('dasboardx', {name : result.name})
+               res.render('dasboardx', {name : result.name, email : result.email})
            }else{
                console.log(err)
    
